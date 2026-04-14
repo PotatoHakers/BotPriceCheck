@@ -1,5 +1,0 @@
-tracker.db
-*.png
-.env
-.vbs
-__pycache__/
