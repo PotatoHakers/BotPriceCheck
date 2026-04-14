@@ -19,6 +19,16 @@ from aiogram.filters import Command
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, FSInputFile, BotCommand
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 
+import os
+from dotenv import load_dotenv
+
+load_dotenv() # Загружает данные из файла .env
+API_TOKEN = os.getenv("BOT_TOKEN")
+
+# Если токен не найден, бот выдаст понятную ошибку
+if not API_TOKEN:
+    exit("Ошибка: Токен не найден в файле .env")
+
 # --- НАСТРОЙКИ --- #
 API_TOKEN = "ТВОЙ_ТОКЕН"
 IMAGE_PATH = "image_db2d24.png"

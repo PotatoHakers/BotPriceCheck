@@ -1,4 +1,5 @@
 tracker.db
-__pycache__/
 *.png
 .env
+.vbs
+__pycache__/
